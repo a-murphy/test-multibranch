@@ -4,6 +4,10 @@ resources:
     configuration:
       gitProvider: aidan_github
       path: a-murphy/test-multibranch
+    branches:
+      include: master
+    buildOn:
+      commit: false
  
 pipelines:
   - name: multibranch2
@@ -25,6 +29,7 @@ pipelines:
             - name: multibranch2_1
           inputResources:
             - name: multibranch2
+              branch: master
         execution:
           onStart:
             - echo "Prepping build environment"
