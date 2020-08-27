@@ -1,5 +1,5 @@
 resources:
-  - name: multibranch2_2
+  - name: multibranch2
     type: GitRepo
     configuration:
       gitProvider: aidan_github
@@ -12,9 +12,9 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: multibranch2_2
+            - name: multibranch2
               trigger: false
-            - name: multibranch2_2
+            - name: multibranch2
               trigger: false
               branch: "multibranch/two"
         execution:
