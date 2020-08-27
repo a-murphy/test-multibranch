@@ -4,10 +4,6 @@ resources:
     configuration:
       gitProvider: aidan_github
       path: a-murphy/test-multibranch
-      branches:
-        include: master
-      buildOn:
-        commit: false
  
 pipelines:
   - name: multibranch2
