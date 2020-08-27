@@ -14,6 +14,9 @@ pipelines:
           inputResources:
             - name: multibranch2_2
               trigger: false
+            - name: multibranch2_2
+              trigger: false
+              branch: "multibranch/two"
         execution:
           onExecute:
             - echo $step_url
