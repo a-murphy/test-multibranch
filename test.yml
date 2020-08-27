@@ -28,7 +28,7 @@ pipelines:
           inputSteps:
             - name: multibranch2_1
           inputResources:
-            - name: multibranch2
+            - name: multibranch1
               branch: master
         execution:
           onStart:
