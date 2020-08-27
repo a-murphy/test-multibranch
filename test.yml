@@ -16,7 +16,6 @@ pipelines:
               trigger: false
           outputResources:
             - name: multibranch2
-              trigger: false
               branch: "multibranch/two"
         execution:
           onExecute:
