@@ -27,6 +27,9 @@ pipelines:
           inputResources:
             - name: multibranch1
               branch: master
+            - name: multibranch2
+              trigger: false
+              branch: "multibranch/three"
         execution:
           onStart:
             - echo "Prepping build environment"
