@@ -4,6 +4,10 @@ resources:
     configuration:
       gitProvider: aidan_github
       path: a-murphy/5testRename5
+  - name: multibranchProperties
+    type: PropertyBag
+    configuration:
+      branch: {{gitBranch}}
  
 pipelines:
   - name: multibranch1
