@@ -4,6 +4,10 @@ resources:
     configuration:
       gitProvider: aidan_github
       path: a-murphy/test-multibranch
+  - name: multibranchProperties
+    type: PropertyBag
+    configuration:
+      branch: {{gitBranch}}
  
 pipelines:
   - name: multibranch2
@@ -16,9 +20,13 @@ pipelines:
               trigger: false
               branch: "multibranch/two"
             - name: gitRepoResource
+          outputResources:
+            - name: multibranchProperties
+              branch: master
         execution:
           onExecute:
             - echo $step_url
+            - write_output multibranchProperties test=$run_number
 
       - name: multibranch2_2
         type: Bash
