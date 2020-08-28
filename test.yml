@@ -15,6 +15,7 @@ pipelines:
             - name: multibranch2
               trigger: false
               branch: "multibranch/two"
+            - name: gitRepoResource
         execution:
           onExecute:
             - echo $step_url
